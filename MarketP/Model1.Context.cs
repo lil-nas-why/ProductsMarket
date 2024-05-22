@@ -13,20 +13,20 @@ namespace MarketP
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class marketEntities : DbContext
+    public partial class marketEntities1 : DbContext
     {
-        public marketEntities()
-            : base("name=marketEntities")
+        public marketEntities1()
+            : base("name=marketEntities1")
         {
         }
 
-        private static marketEntities _context;
+        private static marketEntities1 _context;
 
-        public static marketEntities GetContext()
+        public static marketEntities1 GetContext()
         {
             if (_context == null)
             {
-                _context = new marketEntities();
+                _context = new marketEntities1();
             }
 
             return _context;

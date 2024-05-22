@@ -5,24 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarketP"
         mc:Ignorable="d"
-        Title="BasketWindow" Height="410" Width="450">
+        Title="BasketWindow" Height="460" Width="480">
     <Grid>
-        <ListView x:Name="ProductsBasketLV" Grid.Row="1" Margin="0 20 23 0" Background="Transparent" BorderBrush="Transparent" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <ListView x:Name="ProductsBasketLV" Margin="0 20 0 0" Background="Transparent" BorderBrush="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock x:Name="nameProducts" Text="{Binding nameProductB, StringFormat={}{0} }" FontSize="18" />
-                                <TextBlock x:Name="customer" Text="{Binding customerB, StringFormat={}{0} }" FontSize="16"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock x:Name="nameProducts" Text="{Binding nameProductB, StringFormat={}{0} }" FontSize="18" />
+                                    <TextBlock x:Name="customer" Text="{Binding customerB, StringFormat={}{0} }" FontSize="16"/>
+                                </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="160 0 0 0">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                     <TextBlock x:Name="price" Text="{Binding priceB, StringFormat=Цена: {0} }" FontSize="18" FontWeight="DemiBold" />
                                     <TextBlock Text="Руб."  FontSize="18" FontWeight="DemiBold" Margin="5 0 0 0"/>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                     <TextBlock x:Name="sale" Text="{Binding sale, StringFormat=Скидка: {0} }" FontSize="16" />
                                     <TextBlock Text="Руб."  FontSize="16"  Margin="5 0 0 0"/>
                                 </StackPanel>
@@ -32,6 +44,24 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <StackPanel Grid.Column="1" Height="100">
+            <Button x:Name="CountSale" Content="Расчитать скидку" Height="30" Click="CountSale_Click" />
+            <Button x:Name="AddOrder" Content="Оформить заказ" Height="30" Click="AddOrder_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Right" Width="140">
+            
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Итог:" Width="30" Height="20" HorizontalAlignment="Left" />
+                    <TextBlock x:Name="Total" Text="0" FontSize="16" Grid.Row="1" HorizontalAlignment="Right" Width="100" TextAlignment="Right"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <TextBlock Text="Итог скидки:" Width="70" Height="20" HorizontalAlignment="Left" />
+                    <TextBlock x:Name="TotalSale" Text="0" FontSize="16" Grid.Row="1" HorizontalAlignment="Right" Width="60" TextAlignment="Right"/>
+                </StackPanel>
+            
+        </StackPanel>
     </Grid>
 </Window>

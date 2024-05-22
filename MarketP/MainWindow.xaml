@@ -35,8 +35,11 @@
                 <DataTemplate>
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image Width="100" Height="30" Source="Resources/bar.png" />
                             <StackPanel Orientation="Vertical">
+                                
                                 <TextBlock x:Name="nameProducts" Text="{Binding nameProducts, StringFormat={}{0} }" FontSize="18" />
+                                
                                 <TextBlock x:Name="customer" Text="{Binding customer, StringFormat={}{0} }" FontSize="16"/>
                                 <TextBlock x:Name="expiration" Text="{Binding expiration, StringFormat=Срок годности: {0:d} }"/>
                             </StackPanel>
@@ -57,10 +60,13 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="GoToBasket" Content="Добавить в корзину" Grid.Column="2" Click="GoToBasket_Click"/>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button x:Name="GoToBasket" Content="Добавить в корзину" Click="GoToBasket_Click" Height="40"/>
+            <Button x:Name="basket" Click="basket_Click" Content="Перейти к корзине" Height="40"/>
+        </StackPanel>
 
-        <Border  Background="#4B998B" BorderBrush="#2E645A" Width="450" BorderThickness="4" Height="23" VerticalAlignment="Top" Grid.Row="1" CornerRadius="10 10 0 0"/>
+        <Border Background="#4B998B" BorderBrush="#2E645A" Width="450" BorderThickness="4" Height="23" VerticalAlignment="Top" Grid.Row="1" CornerRadius="10 10 0 0"/>
 
-        <Border  Background="#4B998B" BorderBrush="#2E645A" Width="23" BorderThickness="4" Height="450" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1" CornerRadius="10 10 0 0" />
+        <Border Background="#4B998B" BorderBrush="#2E645A" Width="23" BorderThickness="4" Height="450" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1" CornerRadius="10 10 0 0" />
     </Grid>
 </Window>

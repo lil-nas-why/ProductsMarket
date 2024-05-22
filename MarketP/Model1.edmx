@@ -16,7 +16,6 @@
           <Property Name="expiration" Type="date" />
           <Property Name="priceB" Type="float" />
           <Property Name="sale" Type="float" />
-          <Property Name="barcode" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="products">
           <Key>
@@ -29,7 +28,6 @@
           <Property Name="expiration" Type="date" />
           <Property Name="price" Type="float" Nullable="false" />
           <Property Name="sale" Type="float" />
-          <Property Name="barcode" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -62,7 +60,6 @@
           <Property Name="expiration" Type="DateTime" Precision="0" />
           <Property Name="priceB" Type="Double" />
           <Property Name="sale" Type="Double" />
-          <Property Name="barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="products">
           <Key>
@@ -75,7 +72,6 @@
           <Property Name="expiration" Type="DateTime" Precision="0" />
           <Property Name="price" Type="Double" Nullable="false" />
           <Property Name="sale" Type="Double" />
-          <Property Name="barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -87,7 +83,7 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityContainer Name="marketEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="marketEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BasketProducts" EntityType="Self.BasketProducts" />
           <EntitySet Name="products" EntityType="Self.products" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -97,7 +93,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище marketModelContainer" CdmEntityContainer="marketEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище marketModelContainer" CdmEntityContainer="marketEntities1">
           <EntitySetMapping Name="BasketProducts">
             <EntityTypeMapping TypeName="marketModel.BasketProducts">
               <MappingFragment StoreEntitySet="BasketProducts">
@@ -108,7 +104,6 @@
                 <ScalarProperty Name="expiration" ColumnName="expiration" />
                 <ScalarProperty Name="priceB" ColumnName="priceB" />
                 <ScalarProperty Name="sale" ColumnName="sale" />
-                <ScalarProperty Name="barcode" ColumnName="barcode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -122,7 +117,6 @@
                 <ScalarProperty Name="expiration" ColumnName="expiration" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="sale" ColumnName="sale" />
-                <ScalarProperty Name="barcode" ColumnName="barcode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

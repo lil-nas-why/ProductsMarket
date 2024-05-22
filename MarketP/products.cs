@@ -21,6 +21,5 @@ namespace MarketP
         public Nullable<System.DateTime> expiration { get; set; }
         public double price { get; set; }
         public Nullable<double> sale { get; set; }
-        public string barcode { get; set; }
     }
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketP", "MarketP.csproj", "{46A92DF9-6B53-4A2E-B5AB-83846F5EFB8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "functionModule", "..\functionModule\functionModule.csproj", "{1C2F49BB-8658-4337-AAFC-2D157C909DC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter", "..\Counter\Counter.csproj", "{FE76A278-4606-44D7-9261-45128733E740}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{46A92DF9-6B53-4A2E-B5AB-83846F5EFB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46A92DF9-6B53-4A2E-B5AB-83846F5EFB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46A92DF9-6B53-4A2E-B5AB-83846F5EFB8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C2F49BB-8658-4337-AAFC-2D157C909DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C2F49BB-8658-4337-AAFC-2D157C909DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C2F49BB-8658-4337-AAFC-2D157C909DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C2F49BB-8658-4337-AAFC-2D157C909DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE76A278-4606-44D7-9261-45128733E740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE76A278-4606-44D7-9261-45128733E740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE76A278-4606-44D7-9261-45128733E740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE76A278-4606-44D7-9261-45128733E740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MarketDB;
 
 namespace MarketP
 {
@@ -27,7 +16,8 @@ namespace MarketP
 
         private void UpdateSource()
         {
-            var source = marketEntities.GetContext().products.ToList();
+            var s = marketEntities1.GetContext().products;
+            var source = s.ToList();
             if(!String.IsNullOrWhiteSpace(SearchBar.Text))
             {
                 source = source.Where(x => x.nameProducts.ToLower().Contains(SearchBar.Text.ToLower())).ToList();
@@ -47,24 +37,37 @@ namespace MarketP
 
         private void GoToBasket_Click(object sender, RoutedEventArgs e)
         {
+            
 
-            if(_selectedProduct!= null)
+            if (_selectedProduct!= null)
             {
-                using (var context = marketEntities.GetContext())
+                using (var context = marketEntities1.GetContext())
                 {
                     var basketItem = new BasketProducts
                     {
                         idBasketProduct = _selectedProduct.idProducts,
-                        quantity = 1
+                        quantity = 1,
+                        nameProductB = _selectedProduct.nameProducts,
+                        customerB = _selectedProduct.customer,
+                        expiration = _selectedProduct.expiration,
+                        priceB = _selectedProduct.price,
+                        sale = _selectedProduct.sale,
+                       
+                        
                     };
-                    marketEntities.GetContext().BasketProducts.Add(basketItem);
-                    marketEntities.GetContext().SaveChanges();
+                    marketEntities1.GetContext().BasketProducts.Add(basketItem);
+                    marketEntities1.GetContext().SaveChanges();
+                    marketEntities1.GetContext().BasketProducts.ToList();
                 }
 
-                var basketWindow = new BasketWindow();
-                basketWindow.UpdateBasketItem();
-                basketWindow.Show();
             }
+        }
+
+        private void basket_Click(object sender, RoutedEventArgs e)
+        {
+            var basketWindow = new BasketWindow();
+            basketWindow.UpdateBasketItem();
+            basketWindow.ShowDialog();
         }
     }
 }
