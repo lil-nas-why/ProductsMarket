@@ -34,11 +34,11 @@
 
 ![image](https://github.com/lil-nas-why/ProductsMarket/assets/116517177/5f61caad-1140-4f63-abe0-3b92a4436bdd)
 
-![image](https://github.com/lil-nas-why/ChemistryApplication/assets/116517177/152dbcd2-b741-4b82-9241-621a06d63db6)
-
 ***
-Просмотр таблицы Менделеева
-![image](https://github.com/lil-nas-why/ChemistryApplication/assets/116517177/706355ad-cf12-4a4d-8325-36d93f3d3824)
+
+Генерация чека по нажатию на кнопку "Оформить заказ"
+
+![image](https://github.com/lil-nas-why/ProductsMarket/assets/116517177/cba2919e-838d-4c3b-8ce9-b2d019e23739)
 
 ***
 P.S.(запуск проекта)
