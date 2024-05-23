@@ -170,5 +170,8 @@
     </Content>
     <Resource Include="Resources\bar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Checks\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

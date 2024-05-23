@@ -1,0 +1,5 @@
+Name: Огурцы, Customer: Ботаника, Price: 89, Sale: 10
+Name: Помидоры, Customer: 99, Price: 70, Sale: 15
+Name: Бананы, Customer: 109, Price: 99, Sale: 20
+Name: Хурма, Customer: 130, Price: 68, Sale: 8
+Total: 326, Total Sale: 53
